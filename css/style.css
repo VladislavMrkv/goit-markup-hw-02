@@ -12,6 +12,7 @@
   --second-bg-color: #e5e5e5;
   --third-bg-color: #f5f4fa;
   --forth-bg-color: #ffffff;
+  --fifth-bg-color: #eeeeee;
 }
 
 body {
@@ -241,4 +242,27 @@ body {
 .hero_portfolio_item_btn:focus {
   color: var(--third-text-color);
   background: var(--accent-color);
+}
+
+.hero_portfolio_second_items {
+  background: var(--forth-bg-color);
+  border: 1px solid var(--fifth-bg-color);
+  box-sizing: border-box;
+}
+
+.hero_portfolio_second_names {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+
+  letter-spacing: 0.06em;
+
+  color: var(--secondary-text-color);
+}
+
+.hero_portfolio_second_text {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+
+  color: var(--primary-text-color);
 }
