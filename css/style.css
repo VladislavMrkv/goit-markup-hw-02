@@ -3,21 +3,19 @@
   --secondary-title-color: #212121;
 
   --primary-text-color: #757575;
-  --secondary-text-color: #212121;
-  --third-text-color: #ffffff;
 
   --accent-color: #2196f3;
 
   --bg-color: #2f303a;
-  --second-bg-color: #e5e5e5;
-  --third-bg-color: #f5f4fa;
-  --forth-bg-color: #ffffff;
-  --fifth-bg-color: #eeeeee;
+  --second-bg-color: #f5f4fa;
+  --third-bg-color: #eeeeee;
 }
 
 body {
+  background-color: var(--primary-title-color);
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 .link {
@@ -29,7 +27,7 @@ body {
 }
 
 .card_bg {
-  background: var(--forth-bg-color);
+  background: var(--primary-title-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -44,11 +42,17 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  color: var(--secondary-text-color);
+  color: var(--secondary-title-color);
 }
 
 .header_link:hover,
-.header_link:focus {
+.header_link:focus,
+.header_contacts_link:hover,
+.header_contacts_link:focus {
+  color: var(--accent-color);
+}
+
+.header_link.current {
   color: var(--accent-color);
 }
 
@@ -61,11 +65,6 @@ body {
   color: var(--primary-text-color);
 }
 
-.header_contacts_link:hover,
-.header_contacts_link:focus {
-  color: var(--accent-color);
-}
-
 .header_logo {
   font-family: Raleway;
   font-style: normal;
@@ -76,7 +75,7 @@ body {
 }
 
 .header_logo_word {
-  color: var(--secondary-text-color);
+  color: var(--secondary-title-color);
 }
 
 /*----------HERO-----------*/
@@ -91,7 +90,9 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: var(--third-text-color);
+  cursor: pointer;
+
+  color: var(--primary-title-color);
 
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -117,10 +118,6 @@ body {
 
 /*---------peculiarities--------*/
 
-.peculiarities {
-  background-color: var(--second-bg-color);
-}
-
 .peculiarities_titles {
   font-weight: bold;
   font-size: 14px;
@@ -139,10 +136,6 @@ body {
 
 /*---------our_work--------*/
 
-.our_work {
-  background-color: var(--second-bg-color);
-}
-
 .our_work_title {
   font-weight: bold;
   font-size: 36px;
@@ -155,7 +148,7 @@ body {
 /*---------our_team--------*/
 
 .our_team {
-  background-color: var(--third-bg-color);
+  background-color: var(--second-bg-color);
 }
 
 .our_team_title {
@@ -174,7 +167,7 @@ body {
 
   text-align: center;
 
-  color: var(--secondary-text-color);
+  color: var(--secondary-title-color);
 }
 
 .our_team_text {
@@ -203,14 +196,14 @@ body {
 }
 
 .footer_logo_word {
-  color: var(--third-text-color);
+  color: var(--primary-title-color);
 }
 
 .footer_link_address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--third-text-color);
+  color: var(--primary-title-color);
 }
 
 .footer_link {
@@ -221,32 +214,45 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer_link_address:hover,
+.footer_link_address:focus,
+.footer_link:hover,
+.footer_link:focus {
+  color: var(--accent-color);
+}
+
 /*---------portfolio--------*/
 
 /*---------hero_portfolio--------*/
 
 .hero_portfolio_item_btn {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(26 / 16);
   text-align: center;
 
-  color: var(--secondary-text-color);
+  color: var(--secondary-title-color);
 
-  background: var(--third-bg-color);
+  background: var(--second-bg-color);
   border-radius: 4px;
   border: none;
 }
 
 .hero_portfolio_item_btn:hover,
 .hero_portfolio_item_btn:focus {
-  color: var(--third-text-color);
+  color: var(--primary-title-color);
+  background: var(--accent-color);
+}
+
+.hero_portfolio_item_btn:active {
+  color: var(--primary-title-color);
   background: var(--accent-color);
 }
 
 .hero_portfolio_second_items {
-  background: var(--forth-bg-color);
-  border: 1px solid var(--fifth-bg-color);
+  background: var(--primary-title-color);
+  border: 1px solid var(--third-bg-color);
   box-sizing: border-box;
 }
 
@@ -257,7 +263,7 @@ body {
 
   letter-spacing: 0.06em;
 
-  color: var(--secondary-text-color);
+  color: var(--secondary-title-color);
 }
 
 .hero_portfolio_second_text {
